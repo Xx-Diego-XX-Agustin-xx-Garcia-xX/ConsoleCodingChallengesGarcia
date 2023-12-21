@@ -286,9 +286,13 @@ class ConsoleCodingChallenges
         if (a == true && b == true)
         {
             result = true;
+            Console.WriteLine("The statement that both " + a + " and " + b + " are true is " + result);
         }
         else
-        Console.WriteLine("The statement that both " + a + " and " + b + " are true is " + result);
+        {
+            result = false;
+            Console.WriteLine("The statement that both " + a + " and " + b + " are true is " + result);
+        }
         Restart("");
         return true;
     }
