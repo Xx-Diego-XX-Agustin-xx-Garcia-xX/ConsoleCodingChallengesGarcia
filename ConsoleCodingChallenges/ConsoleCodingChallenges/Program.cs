@@ -420,7 +420,6 @@ class ConsoleCodingChallenges
         Restart("");
         return 0;
     }
-
     public static int FindMinMax(int[] a)
     {
         Console.WriteLine("Input  10 integers to be measured from minimum to maximum here: ");
