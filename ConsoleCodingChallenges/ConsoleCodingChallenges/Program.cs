@@ -3,14 +3,103 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Globalization;
 using System.IO;
+using System.Reflection.Metadata;
 using System.Security.Cryptography.X509Certificates;
 
 class ConsoleCodingChallenges
 {
     static void Main()
     {
-        Console.WriteLine("Hello World");
-        HammingLength("", "");
+        int a;
+        Console.WriteLine("Hello World. My name is Diego Agustin Garcia and today I have a variety of programs to select from. Simply enter an integer corresponding to the program here: ");
+        a = Convert.ToInt32(Console.ReadLine());
+        switch(a)
+        {
+            case 1:
+                Sum(0, 0);
+                break;
+            case 2:
+                MinutesToSeconds(0);
+                break;
+            case 3:
+                Zeration(0);
+                break;
+            case 4:
+                CircuitPower(0, 0);
+                break;
+            case 5:
+                CalculateAge(0);
+                break;
+            case 6:
+                TriangleArea(0, 0);
+                break;
+            case 7:
+                AtMostZero(0);
+                break;
+            case 8:
+                SumHundred(0, 0);
+                break;
+            case 9:
+                IsEqual(0, 0);
+                break;
+            case 10:
+                GiveSomething("");
+                break;
+            case 11:
+                InvertBoolean(true);
+                break;
+            case 12:
+                HoursToSeconds(0);
+                break;
+            case 13:
+                PolygonAngle(0);
+                break;
+            case 14:
+                NameString("");
+                break;
+            case 15:
+                BooleanAndBoolean(true, true);
+                break;
+            case 16:
+                BasketballPoints(0, 0);
+                break;
+            case 17:
+                RectanglePerimeter(0, 0);
+                break;
+            case 18:
+                HelloName("");
+                break;
+            case 19:
+                AnimalLegCounter(0, 0, 0);
+                break;
+            case 20:
+                FootballPoints(0, 0, 0);
+                break;
+            case 21:
+                MonthName(0);
+                break;
+            case 22:
+                int[] b = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                FindMinMax(b);
+                break;
+            case 23:
+                int[] c = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+                FindAbsoluteSum(c);
+                break;
+            case 24:
+                CalculateExponent(0, 0);
+                break;
+            case 25:
+                ArrayLength(0);
+                break;
+            case 26:
+                HammingLength("", "");
+                break;
+            default:
+                Console.WriteLine("ERROR. Integer value is not equal to a current program.");
+                Restart("");
+                break;
+        }
     }
     public static int Sum(int a, int b)
     {
@@ -19,280 +108,274 @@ class ConsoleCodingChallenges
         Console.WriteLine("Enter a second integer here: ");
         b = Convert.ToInt32(Console.ReadLine());
         int sum = a + b;
-        Console.WriteLine("The sum of " + a + " and " + b + " is " + sum);
+        Console.WriteLine("The sum of " + a + " and " + b + " is equal to " + sum);
+        Restart("");
         return 0;
     }
-    public static int ConvertSeconds(int minutes)
+    public static int MinutesToSeconds(int a)
     {
         Console.WriteLine("Enter an integer that represents minutes here: ");
-        minutes = Convert.ToInt32(Console.ReadLine());
-        int seconds = minutes * 60;
-        Console.WriteLine(minutes + " minutes is equal to " + seconds + " seconds");
+        a = Convert.ToInt32(Console.ReadLine());
+        int seconds = a * 60;
+        Console.WriteLine(a + " minutes is equal to " + seconds + " seconds");
+        Restart("");
         return 0;
     }
-    public static int PlusOne(int addend)
+    public static int Zeration(int a)
     {
         Console.WriteLine("Enter an addend here: ");
-        addend = Convert.ToInt32(Console.ReadLine());
-        int onesum = addend + 1;
-        Console.WriteLine(addend + " plus one is equal to " + onesum);
+        a = Convert.ToInt32(Console.ReadLine());
+        int sum = a + 1;
+        Console.WriteLine(a + " plus one is equal to " + sum);
+        Restart("");
         return 0;
     }
-    public static int CircuitPower(int voltage, int current)
+    public static int CircuitPower(int a, int b)
     {
         Console.WriteLine("Enter a quantity of voltage here: ");
-        voltage = Convert.ToInt32(Console.ReadLine());
+        a = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Enter a quantity of current here: ");
-        current = Convert.ToInt32(Console.ReadLine());
-        int power = voltage * current;
-        Console.WriteLine("When the voltage is equal to " + voltage + " and the current is equal to " + current + ", the current power is equal to " + power);
+        b = Convert.ToInt32(Console.ReadLine());
+        int power = a * b;
+        Console.WriteLine("When the voltage is equal to " + a + " and the current is equal to " + b + ", the current power is equal to " + power);
+        Restart("");
         return 0;
     }
-    public static int CalculateAge(int years)
+    public static int CalculateAge(int a)
     {
         Console.WriteLine("Enter your age in years here: ");
-        years = Convert.ToInt32(Console.ReadLine());
-        int days = years * 365;
-        Console.WriteLine("A person who is at least " + years + " years old has lived at least " + days + " days");
+        a = Convert.ToInt32(Console.ReadLine());
+        int days = a * 365;
+        Console.WriteLine("A person who is " + a + " years old has lived at least " + days + " days");
+        Restart("");
         return 0;
     }
-    public static double TriangleArea(double x, double y)
+    public static double TriangleArea(double a, double b)
     {
         Console.WriteLine("Enter an integer for the length of the triangle here:");
-        x = Convert.ToInt32(Console.ReadLine());
+        a = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Enter an integer for the height of the triangle here:");
-        y = Convert.ToInt32(Console.ReadLine());
-        double area = (x * y) / 2;
-        Console.WriteLine("A triangle with a length of " + x + " and a height of " + y + " when rounded will have an area of " + area + " units squared.");
+        b = Convert.ToInt32(Console.ReadLine());
+        double area = (a * b) / 2;
+        Console.WriteLine("A triangle with a length of " + a + " and a height of " + b + " will have an area that is equal to " + area + " units squared.");
+        Restart("");
         return 0;
     }
-    public static int AtMostZero(int integer)
+    public static int AtMostZero(int a)
     {
         bool atMostZero;
         Console.WriteLine("Enter an integer here: ");
-        integer = Convert.ToInt32(Console.ReadLine());
-        if (integer <= 0)
+        a = Convert.ToInt32(Console.ReadLine());
+        if (a <= 0)
         {
             atMostZero = true;
-            Console.WriteLine("The statement that " + integer + " is less than or equal to 0 is " + atMostZero);
+            Console.WriteLine("The statement that " + a + " is less than or equal to 0 is " + atMostZero);
         }
         else
         {
             atMostZero = false;
-            Console.WriteLine("The statement that " + integer + " is less than or equal to 0 is " + atMostZero);
+            Console.WriteLine("The statement that " + a + " is less than or equal to 0 is " + atMostZero);
         }
+        Restart("");
         return 0;
     }
-    public static int SumHundred(int addendX, int addendY)
+    public static int SumHundred(int a, int b)
     {
         Console.WriteLine("Enter a first integer here:");
-        addendX = Convert.ToInt32(Console.ReadLine());
+        a = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Enter a second integer here:");
-        addendY = Convert.ToInt32(Console.ReadLine());
-        int sumXY = addendX + addendY;
+        b = Convert.ToInt32(Console.ReadLine());
+        int sum = a + b;
         bool sumHundred;
-        if (sumXY < 100)
+        if (sum < 100)
         {
             sumHundred = true;
-            Console.WriteLine("The statement that " + sumXY + " is less than 100 is " + sumHundred);
+            Console.WriteLine("The statement that " + sum + " is less than 100 is " + sumHundred);
         }
         else
         {
             sumHundred = false;
-            Console.WriteLine("The statement that " + sumXY + " is less than 100 is " + sumHundred);
+            Console.WriteLine("The statement that " + sum + " is less than 100 is " + sumHundred);
         }
+        Restart("");
         return 0;
     }
-    public static int IsEqual(int i, int j)
+    public static int IsEqual(int a, int b)
     {
-        Console.WriteLine("Enter a first integer here:");
-        i = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter a first integer here: ");
+        a = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Enter a second integer here:");
-        j = Convert.ToInt32(Console.ReadLine());
-        int ij = i + j;
+        b = Convert.ToInt32(Console.ReadLine());
         bool isEqual;
-        if (i == j)
+        if (a == b)
         {
             isEqual = true;
-            Console.WriteLine("The statement that " + i + " is equal to " + j + " is " + isEqual);
+            Console.WriteLine("The statement that " + a + " is equal to " + b + " is " + isEqual);
         }
         else
         {
             isEqual = false;
-            Console.WriteLine("The statement that " + i + " is equal to " + j + " is " + isEqual);
+            Console.WriteLine("The statement that " + a + " is equal to " + b + " is " + isEqual);
         }
+        Restart("");
         return 0;
     }
-    public static string GiveMeSomething(string something)
+    public static string GiveSomething(string a)
     {
-        Console.WriteLine("Give the function something in the form of a string: ");
-        something = Console.ReadLine();
-        Console.WriteLine("Something" + something);
+        Console.WriteLine("Enter a value into the function in the form of a string here: ");
+        a = Console.ReadLine();
+        Console.WriteLine("Something " + a);
+        Restart("");
         return "";
 
     }
-    public static bool Reverse(bool state)
+    public static bool InvertBoolean(bool a)
     {
-        bool unstate;
-        Console.WriteLine("Insert either a ''true'' or ''false'' value here: ");
-        state = Convert.ToBoolean(Console.ReadLine());
-        if (state == true)
+        bool inverse = true;
+        Console.WriteLine("Enter a Boolean value (\"true\" or \"false\") here: ");
+        a = Convert.ToBoolean(Console.ReadLine());
+        if (a == true)
         {
-            unstate = false;
-            Console.WriteLine(unstate);
+            inverse = !inverse;
         }
-        else if (state == false)
-        {
-            unstate = true;
-            Console.WriteLine(unstate);
-        }
-        else
-        {
-            Console.WriteLine("error");
-        }
+        Console.WriteLine("The inverse of " + a + " is equal to " + inverse);
+        Restart("");
         return true;
     }
-    public static int HoursIntoSeconds(int hours)
+    public static int HoursToSeconds(int a)
     {
         Console.WriteLine("Enter the hour of the day here: ");
-        hours = Convert.ToInt32(Console.ReadLine());
-        int seconds = hours * 3600;
-        Console.WriteLine(hours + " hours are eequal to " + seconds + " seconds");
+        a = Convert.ToInt32(Console.ReadLine());
+        int seconds = a * 3600;
+        Console.WriteLine(a + " hours are eequal to " + seconds + " seconds");
+        Restart("");
         return 0;
     }
-    public static int PolygonAngle(int sides)
+    public static int PolygonAngle(int a)
     {
         Console.WriteLine("Enter a number that represents the amount of sides on a polygon: ");
-        sides = Convert.ToInt32(Console.ReadLine());
-        if (sides < 3)
+        a = Convert.ToInt32(Console.ReadLine());
+        if (a < 3)
         {
-            Console.WriteLine("error");
+            Console.WriteLine("ERROR. Integer value is below the minimum side number of a polygon");
         }
         else
         {
-            int angles = (sides - 2) * 180;
-            Console.WriteLine("The angels of a polygon with " + sides + " sides when added equal " + angles + " degrees");
+            int angles = (a - 2) * 180;
+            Console.WriteLine("The angles of a polygon with " + a + " sides when added equal " + angles + " degrees");
         }
+        Restart("");
         return 0;
     }
-    public static string NameString(string name)
+    public static string NameString(string a)
     {
         Console.WriteLine("Enter your first name here: ");
-        name = Console.ReadLine();
-        string result = (" Garcia");
-        Console.WriteLine(name + result);
+        a = Console.ReadLine();
+        string surname = " Garcia";
+        Console.WriteLine(a + surname);
+        Restart("");
         return "";
     }
-    public static bool BooleanAndBoolean(bool aBoolean, bool bBoolean)
+    public static bool BooleanAndBoolean(bool a, bool b)
     {
         bool result = false;
         Console.WriteLine("Enter a Boolean value (\"true\" or \"false\") here: ");
-        aBoolean = Convert.ToBoolean(Console.ReadLine());
+        a = Convert.ToBoolean(Console.ReadLine());
         Console.WriteLine("Enter a second Boolean value here: ");
-        bBoolean = Convert.ToBoolean(Console.ReadLine());
-        if (aBoolean == true && bBoolean == true)
+        b = Convert.ToBoolean(Console.ReadLine());
+        if (a == true && b == true)
         {
             result = true;
-            Console.WriteLine(result);
         }
         else
-        {
-            Console.WriteLine(result);
-        }
+        Console.WriteLine("The statement that both " + a + " and " + b + " are true is " + result);
+        Restart("");
         return true;
     }
-    public static int BasketballPoints(int bPoints, int cPoints)
+    public static int BasketballPoints(int a, int b)
     {
-        Console.WriteLine("Input the number of 2-pointers scored: ");
-        bPoints = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Input the number of 3-pointers scored: ");
-        cPoints = Convert.ToInt32(Console.ReadLine());
-        if (bPoints < 0 || cPoints < 0)
+        int points = 0;
+        Console.WriteLine("Enter the number of 2-pointers scored in a basketball game here: ");
+        a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the number of 3-pointers scored in a basketball game here: ");
+        b = Convert.ToInt32(Console.ReadLine());
+        if (a < 0 || b < 0)
         {
-            Console.WriteLine("ERROR");
+            Console.WriteLine("ERROR. Integer value is below the minimum number of points that can be scored in a basketball game.");
         }
         else
         {
-            int yPoints = bPoints * 2;
-            int zPoints = cPoints * 3;
-            int points = yPoints + zPoints;
-            Console.WriteLine(points + " points were scored in this basketball game.");
+            points = (a * 2) + (b * 3);   
         }
+        Console.WriteLine(points + " points were scored in this basketball game.");
+        Restart("");
         return 0;
     }
-    public static double RectanglePerimeter(double x, double z)
+    public static double RectanglePerimeter(double a, double b)
     {
         double sides = 0;
         double perimeter = 0;
-        Console.WriteLine("Insert the length of a rectangle here");
-        x = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("Insert the breadth of a rectangle here");
-        z = Convert.ToDouble(Console.ReadLine());
-        if (x <= 0 || z <= 0)
+        Console.WriteLine("Enter the length of a rectangle here");
+        a = Convert.ToDouble(Console.ReadLine());
+        Console.WriteLine("Enter the breadth of a rectangle here");
+        b = Convert.ToDouble(Console.ReadLine());
+        if (a <= 0 || b <= 0)
         {
             Console.WriteLine("ERROR");
         }
         else
         {
-            sides = x + z;
-            perimeter = 2 * sides;
-            Console.WriteLine("A rectangle with a length of " + x + " and a breadth of " + z + " has a perimeter of " + perimeter);
+            perimeter = 2 * (a + b);
+            Console.WriteLine("A rectangle with a length of " + a + " and a breadth of " + b + " has a perimeter that is equal to " + perimeter);
         }
+        Restart("");
         return 0;
     }
-    public static string HelloName(string name)
+    public static string HelloName(string a)
     {
-        Console.WriteLine("Insert your name here: ");
-        name = Console.ReadLine();
-        Console.WriteLine("Hello " + name);
+        Console.WriteLine("Enter your name here: ");
+        a = Console.ReadLine();
+        Console.WriteLine("Hello " + a);
+        Restart("");
         return "";
     }
-    public static int AnimalLimbCounter(int poultry, int bovine, int porcine)
+    public static int AnimalLegCounter(int a, int b, int c)
     {
-        string restartKey;
-        int totalAnimalLimbs = 0;
-        Console.WriteLine("Input the number of chickens as an integer here:");
-        poultry = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Input the number of cows as an integer here:");
-        bovine = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Input the number of pigs as an integer here:");
-        porcine = Convert.ToInt32(Console.ReadLine());
-        if (poultry < 0 || bovine < 0 || porcine < 0)
+        int legs = 0;
+        Console.WriteLine("Enter the number of chickens as an integer here:");
+        a = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the number of cows as an integer here:");
+        b = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter the number of pigs as an integer here:");
+        c = Convert.ToInt32(Console.ReadLine());
+        if (a < 0 || b < 0 || c < 0)
         {
-            Console.WriteLine("ERROR: You cannot have negative animals");
-            Console.WriteLine("To restart input RESTART into the console");
-            restartKey = Console.ReadLine();
-            if (restartKey == ("RESTART"))
-            {
-                Main();
-            }
-            else
-            {
-                Console.WriteLine("ERROR: Restart key is not equal to RESTART");
-            }
+            Console.WriteLine("ERROR. Integer value is below the minimum number of animals that can exist.");
         }
         else
         {
-            totalAnimalLimbs = (poultry * 2) + (bovine * 4) + (porcine * 4);
-            Console.WriteLine("If you have " + poultry + " chickens, " + bovine + " cows, and " + porcine + " pigs, you would have " + totalAnimalLimbs + " limbs from each animal, excluding wings.");
+            legs = (a * 2) + (b * 4) + (c * 4);
+            Console.WriteLine("The amount of legs on " + a + " chickens " + b + " cows, and " + c + " pigs is equal to " + legs);
         }
+        Restart("");
         return 0;
     }
-    public static int FootballPoints(int success, int tie, int failure)
+    public static int FootballPoints(int a, int b, int c)
     {
         Console.WriteLine("Input the amount of successes, ties, and failures during a football season here: ");
-        success = Convert.ToInt32(Console.ReadLine());
-        failure = Convert.ToInt32(Console.ReadLine());
-        tie = Convert.ToInt32(Console.ReadLine());
-        int points = (success * 3) + (tie * 1) + (failure * 0);
-        Console.WriteLine("A football team that has succeeded " + success + " times, failed " + failure + " times, and tied " + tie + " times has scored " + points + " points.");
+        a = Convert.ToInt32(Console.ReadLine());
+        b = Convert.ToInt32(Console.ReadLine());
+        c = Convert.ToInt32(Console.ReadLine());
+        int points = (a * 3) + (b * 1) + (c * 0);
+        Console.WriteLine("A football team that has succeeded " + a + " times, failed " + c + " times, and tied " + b + " times has scored " + points + " points.");
+        Restart("");
         return 0;
     }
-    public static int MonthName(int month)
+    public static int MonthName(int a)
     {
-        Console.WriteLine("Input a number corresponding to a month here");
-        month = Convert.ToInt32(Console.ReadLine());
-        switch(month)
+        Console.WriteLine("Input a number corresponding to a month here: ");
+        a = Convert.ToInt32(Console.ReadLine());
+        switch(a)
         {
             case 1:
                 Console.WriteLine("January");
@@ -334,36 +417,38 @@ class ConsoleCodingChallenges
                 Console.WriteLine("ERROR. There are no more than 12 months in a year.");
                 break;
         }
+        Restart("");
         return 0;
     }
 
-    public static int FindMinMax(int[] sort)
+    public static int FindMinMax(int[] a)
     {
-        Console.WriteLine("Input at most 10 integers to be measured from minimum to maximum");
-        sort[0] = Convert.ToInt32(Console.ReadLine());
-        sort[1] = Convert.ToInt32(Console.ReadLine());
-        sort[2] = Convert.ToInt32(Console.ReadLine());
-        sort[3] = Convert.ToInt32(Console.ReadLine());
-        sort[4] = Convert.ToInt32(Console.ReadLine());
-        sort[5] = Convert.ToInt32(Console.ReadLine());
-        sort[6] = Convert.ToInt32(Console.ReadLine());
-        sort[7] = Convert.ToInt32(Console.ReadLine());
-        sort[8] = Convert.ToInt32(Console.ReadLine());
-        sort[9] = Convert.ToInt32(Console.ReadLine());
-        int min = sort[0];
-        int max = sort[9];
-        for (int i = 0; i < sort.Length; i++)
+        Console.WriteLine("Input  10 integers to be measured from minimum to maximum here: ");
+        a[0] = Convert.ToInt32(Console.ReadLine());
+        a[1] = Convert.ToInt32(Console.ReadLine());
+        a[2] = Convert.ToInt32(Console.ReadLine());
+        a[3] = Convert.ToInt32(Console.ReadLine());
+        a[4] = Convert.ToInt32(Console.ReadLine());
+        a[5] = Convert.ToInt32(Console.ReadLine());
+        a[6] = Convert.ToInt32(Console.ReadLine());
+        a[7] = Convert.ToInt32(Console.ReadLine());
+        a[8] = Convert.ToInt32(Console.ReadLine());
+        a[9] = Convert.ToInt32(Console.ReadLine());
+        int min = a[0];
+        int max = a[9];
+        for (int i = 0; i < a.Length; i++)
         {
-            if (sort[i] < min)
+            if (a[i] < min)
             {
-                sort[i] = min;
+                a[i] = min;
             }
-            else if (sort[i] > max)
+            else if (a[i] > max)
             {
-                sort[i] = max;
+                a[i] = max;
             }
         }
         Console.WriteLine("In this array, the most minimal value is " + min + " and the most maximal value is " + max);
+        Restart("");
         return 0;
     }
     public static int FindAbsoluteSum(int[] a)
@@ -400,6 +485,7 @@ class ConsoleCodingChallenges
         b = Convert.ToInt32(Console.ReadLine());
         int power = (int)MathF.Pow(a, b);
         Console.WriteLine(a + " raised to the power of " + b + " is equal to " + power);
+        Restart("");
         return 0;
     }
     public static int ArrayLength(int a)
